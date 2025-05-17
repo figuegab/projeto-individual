@@ -1,0 +1,88 @@
+.div_fundo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem_cadastro {
+    background-image: url("../../image/xbox_fundojpg.jpg");
+}
+
+.imagem_login {
+    background-image: url("../../image/xbox_fundojpg.jpg");
+}
+
+.container {
+    width: 85%;
+}
+
+.div_caixa {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: auto;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 0.8);
+    border-radius: 12px;
+    padding: 5% 10% 5% 10%;
+    gap: 1rem;
+}
+
+.div_titulo {
+    color: white;
+    font-size: 5vh;
+}
+
+button, input {
+    border: none;
+}
+
+.div_input {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.div_input input {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.div_input i {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.div_botao button {
+    width: 100%;
+    height: 5vh;
+    background-color: green;
+    border-color: white;
+    border-radius: 4px;
+    color: white;
+    box-shadow: none;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.div_botao button:hover {
+    background-color: rgb(5, 100, 5);
+    transform: scale(1.05);
+}
