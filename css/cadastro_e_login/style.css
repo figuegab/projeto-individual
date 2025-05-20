@@ -86,3 +86,9 @@ button, input {
     background-color: rgb(5, 100, 5);
     transform: scale(1.05);
 }
+
+.div_header {
+    display: flex;
+    padding: 1rem;
+    
+}
