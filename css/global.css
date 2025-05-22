@@ -8,3 +8,30 @@
     font-weight: 700;
     font-style: normal;
 }
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 24px;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+}
+
+.nav_lista {
+    list-style: none;
+    display: flex;
+}
+
+.nav_lista li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
