@@ -6,40 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Login</title>
+    <title>Login • 360 World</title>
 
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="./assets/icon/icon pag.png">
 </head>
 
 <body>
 
-    <!--Header-->
-
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
+    <!--header inicio-->
+    <header>
+        <nav>
+            <a class="logo" href="index.html">360 World</a>
             <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="simulador.html">Biblioteca</a></li>
                 <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
+                <li class="agora"><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
-        </div>
-    </div>
-
+        </nav>
+    </header>
+    <!--header fim-->
 
     <div class="login">
         <div class="alerta_erro">
@@ -49,11 +39,11 @@
         </div>
         <div class="container">
             <div class="card card-login">
-                <h2>Olá de volta!</h2>
+                <h2>Bem-vindo de volta!</h2>
                 <div class="formulario">
                     <div class="campo">
                         <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
+                        <input id="email_input" type="text" placeholder="email@email.com">
                     </div>
                     <div class="campo">
                         <span>Senha:</span>
@@ -74,8 +64,7 @@
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
+            <h4>Feito por Gabriel dos Santos Figueiredo</h4>
         </div>
     </div>
     <!--footer fim-->
@@ -85,7 +74,6 @@
 </html>
 
 <script>
-
 
     function entrar() {
         aguardar();

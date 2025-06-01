@@ -70,7 +70,7 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 76%;
     margin: auto;
 }
 
@@ -133,16 +133,16 @@ header a {
 }
 
 .card {
-  width: 45%;
+  width: 30%;
   background-color: rgba(217, 217, 217, 0.8);  
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 70%;
-  padding: 20px 0;
-  /* gap: 1rem; */
+  height: auto;
+  padding: 3rem 2.4rem;
+  gap: 2rem;
 }
 
 .card h2 {
@@ -156,10 +156,11 @@ header a {
   width: 80%;
   justify-content: space-around;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .formulario span {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 800;
 }
 
