@@ -1,0 +1,81 @@
+.banner {
+    display: flex;
+    height: 95vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.banner_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.banner_conteudo h1, h2 {
+    font-size: 34px;
+    color: green;
+}
+
+.banner_conteudo p {
+    font-size: 17px;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.img_start {
+    justify-content: flex-start;
+}
+
+.banner_imagem {
+    width: 80%;
+    height: 80%;
+    background-image: url(../assets/imgs/xbox_tinta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.historia_imagem {
+    width: 80%;
+    height: 80%;
+    background-image: url(../assets/imgs/logomarca_s_fundo_360World.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ods_imagem {
+    width: 80%;
+    height: 80%;
+    background-image: url(../assets/imgs/ods.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.xbox {
+    background-color: #f1f5f9;
+}
+
+.xbox_conteudo {
+    flex-direction: row-reverse;
+}
