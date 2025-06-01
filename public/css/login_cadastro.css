@@ -1,34 +1,8 @@
-/* BANNER */
-
-.banner {
-  height: var(--tamanho-banner);
-  color: white;
-  background-size: cover;
-}
-
-.banner .container {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.banner .container p {
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  font-size: 36px;
-}
-
-.banner .container span {
-  font-weight: 800;
-}
-
 /* LOGIN */
 
 .login {
-  height: var(--tamanho-login);
-  background-image: url('../assets/imgs/xbox_fundojpg.jpg');
-  background-size: cover;
+  height: 90vh;
+  padding: 1rem;
 }
 
 .login .container {
@@ -38,7 +12,7 @@
 }
 
 .card {
-  width: 30%;
+  width: 50%;
   background-color: rgba(217, 217, 217, 0.8);  
   border-radius: 10px;
   display: flex;
