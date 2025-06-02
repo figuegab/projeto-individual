@@ -6,9 +6,10 @@ function buscarComentarios() {
     );
     var instrucaoSql = `
         SELECT 
-            j.nome AS nomeJogo,
+            j.nome AS nome_jogo,
             c.descricao AS comentario,
-            u.nome AS autor
+            u.nome AS autor,
+            u.gamertag AS gamertag
         FROM Comentario c
         JOIN Usuario u ON c.fkUsuario = u.idUsuario
         JOIN Jogos j ON c.fkJogo = j.idJogo;
