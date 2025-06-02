@@ -1,4 +1,4 @@
-DROP DATABASE 360World;
+-- DROP DATABASE 360World;
 
 CREATE DATABASE 360World;
 
@@ -83,6 +83,11 @@ INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
 ('Um clássico! Voltei a jogar depois de anos.', 4, 6),
 ('Um clássico! Voltei a jogar depois de anos.', 4, 6),
 ('Um clássico! Voltei a jogar depois de anos.', 4, 6),
+('Um clássico! Voltei a jogar depois de anos.', 4, 6),('Gráficos bons, mas IA ainda deixa a desejar.', 2, 6),
+('Um clássico! Voltei a jogar depois de anos.', 4, 6),
+('Um clássico! Voltei a jogar depois de anos.', 4, 6),
+('Um clássico! Voltei a jogar depois de anos.', 4, 6),
+('Um clássico! Voltei a jogar depois de anos.', 4, 6),
 ('Um clássico! Voltei a jogar depois de anos.', 4, 6),
 
 -- FIFA Street
@@ -145,3 +150,11 @@ GROUP BY
 ORDER BY 
     qtdComentarios DESC
 LIMIT 8;
+
+SELECT 
+  j.nome AS nomeJogo,
+  c.descricao AS comentario,
+  u.nome AS autor
+FROM Comentario c
+JOIN Usuario u ON c.fkUsuario = u.idUsuario
+JOIN Jogos j ON c.fkJogo = j.idJogo;
