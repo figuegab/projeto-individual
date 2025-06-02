@@ -15,20 +15,19 @@
   --tamanho-footer: 65px;
 }
 
-nav {
-  display: flex;
-  width: 80%;
-  margin: auto;
-}
-
 header {
   height: var(--tamanho-header);
+  width: 100%;
+  display: flex;
+  justify-content: center;
   border-bottom: 2px solid green;
 }
 
 header nav {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
   height: 100%;
 }
 
@@ -38,7 +37,7 @@ header a {
 }
 
 .logo {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .agora {
@@ -46,11 +45,11 @@ header a {
 }
 
 .navbar {
-  width: 300px;
+  width: 40%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   list-style: none;
+  gap: 1rem;
   color: black;
 }
 
@@ -61,16 +60,12 @@ header a {
   text-decoration: none;
 }
 
-header a {
-  margin: 0;
-}
-
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 76%;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 76%;
+  margin: auto;
 }
 
 /* BODY */
@@ -90,8 +85,8 @@ header a {
 }
 
 .botao:hover {
-    background-color: rgb(5, 100, 5);
-    transform: scale(1.05);
+  background-color: rgb(5, 100, 5);
+  transform: scale(1.05);
 }
 
 /* FOOTER */
