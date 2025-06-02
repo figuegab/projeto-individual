@@ -44,6 +44,11 @@ header a {
   font-weight: 800;
 }
 
+.perfil_titulo a {
+  font-weight: 800;
+  color: green;
+}
+
 .navbar {
   width: 40%;
   display: flex;
