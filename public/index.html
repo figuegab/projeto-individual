@@ -8,6 +8,7 @@
     <link rel="icon" href="./assets/icon/icon pag.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início • 360 World</title>
+
 </head>
 
 <body>
@@ -16,12 +17,14 @@
         <nav>
             <a class="logo" href="index.html">360 World</a>
             <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
+                <li class="agora"><a href="index.html">Home</a></li>
                 <li><a href="biblioteca.html">Biblioteca</a></li>
-                <li class="agora"><a href="comentarios.html">Cometários</a></li>
-                <li>|</li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="comentarios.html">Comentários</a></li>
+                <span class="navbar" id="span_usuario_logado">
+                    <li>|</li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </span>
             </ul>
         </nav>
     </header>
@@ -108,6 +111,6 @@
     </div>
 
 </body>
-<script src="./js/scriptHomepage.js"></script>
+<script type="text/javascript" src="./js/scriptHome.js"></script>
 
 </html>
