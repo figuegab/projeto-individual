@@ -37,10 +37,7 @@ CREATE TABLE Comentario (
 );
 
 INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
-('Alice Martins', 'AliMart', 'alice@email.com', 'senha123'),
-('Bruno Souza', 'BSouza', 'bruno@email.com', 'senha456'),
-('Gabriel', 'Gabriel', '123', '123'),
-('Carla Dias', 'CDiasX', 'carla@email.com', 'senha789');
+('Gabriel', 'gabileeu', 'gabriel.figueiredo@sptech.school', md5('123'));
 
 INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('Minecraft', 'Sandbox', 'Construa e explore mundos infinitos com blocos.', 'https://tse3.mm.bing.net/th/id/OIP.e7MgPZ7G2J5jO952pg5_xQHaKt?rs=1&pid=ImgDetMain'),
@@ -55,74 +52,14 @@ INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('GTA V', 'Ação', 'Mundo aberto com missões criminais e liberdade total de exploração.', 'https://tse2.mm.bing.net/th/id/OIP.gBMTsCNmshnOreFOMItMZAHaKd?rs=1&pid=ImgDetMain'),
 ('Rayman Origins', 'Plataforma', 'Jogo de plataforma com gráficos vibrantes e jogabilidade cooperativa.', 'https://tse3.mm.bing.net/th/id/OIP.OHzxzV2resF3CJ7Xn8lfbgHaKc?rs=1&pid=ImgDetMain');
 
+-- -------------------------------------------------------------------------------------- SELECTS ----------------------------------------------------------------------------------------------------------
 
-INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
--- Minecraft
-('Melhor jogo para liberar a criatividade!', 4, 1),
-('As atualizações deixam o jogo cada vez melhor.', 3, 1),
+-- AUTENTICAÇÃO
+-- --------------------------------------------------------------------------- Select de buscar as informações do usuários ------------------------------------------------------------------------------------------------
+SELECT idUsuario, nome, gamertag, email FROM usuario WHERE email = '${email}' AND senha = MD5('${senha}');
 
--- Halo 4
-('Campanha muito emocionante, trilha sonora perfeita.', 2, 2),
-('Multiplayer equilibrado e viciante.', 1, 2),
-
--- Kinect Sports
-('Muito legal jogar com a família, pura diversão!', 2, 3),
-('Cansa rápido, mas é divertido com amigos.', 4, 3),
-
--- Call of Duty: Black Ops II
-('O modo zumbi é simplesmente incrível!', 3, 4),
-('Um dos melhores CoDs já feitos.', 1, 4),
-
--- PES 2013
-('Jogabilidade fluida, senti nostalgia jogando!', 3, 5),
-('Muito melhor que o FIFA dessa época.', 1, 5),
-
--- FIFA 15
-('Gráficos bons, mas IA ainda deixa a desejar.', 2, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),('Gráficos bons, mas IA ainda deixa a desejar.', 2, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-('Um clássico! Voltei a jogar depois de anos.', 4, 6),
-
--- FIFA Street
-('Dribles insanos, muito divertido!', 3, 7),
-('Estilo arcade que diverte bastante.', 2, 7),
-('Estilo arcade que diverte bastante.', 2, 7),
-
--- Cars 2
-('Ótimo para crianças, controles simples.', 1, 8),
-('Me surpreendeu, bem mais divertido do que esperava.', 3, 8),
-
--- Toy Story 3
-('Jogo leve e com bastante conteúdo para explorar.', 4, 9),
-('Perfeito para jogar em família.', 2, 9),
-('Perfeito para jogar em família.', 2, 9),
-('Perfeito para jogar em família.', 2, 9),
-('Perfeito para jogar em família.', 2, 9),
-('Perfeito para jogar em família.', 2, 9),
-('Perfeito para jogar em família.', 2, 9),
-('Perfeito para jogar em família.', 2, 9),
-
--- GTA V
-('História envolvente e mundo aberto gigantesco!', 1, 10),
-('O melhor sandbox da geração.', 2, 10),
-('História envolvente e mundo aberto gigantesco!', 1, 10),
-('O melhor sandbox da geração.', 2, 10),
-
--- Rayman Origins
-('Plataforma divertido com arte lindíssima!', 3, 11),
-('Jogo desafiador e viciante, trilha sonora top.', 4, 11);
-
-
-
-SELECT nome, genero, descricao, urlImagem FROM jogos;
-
+-- CARDS DOS JOGOS / BIBLIOTECA
+-- --------------------------------------------------------------------------- Select de exibir os cards dos jogos ------------------------------------------------------------------------------------------------
 SELECT 
     j.nome,
     j.genero,
@@ -137,7 +74,9 @@ GROUP BY
     j.idJogo, j.nome, j.genero, j.descricao
 ORDER BY 
     qtdComentarios DESC;
-    
+
+-- GRÁFICO
+-- --------------------------------------------------------------------------- Select de exibir quantidade de comentarios no grafico ------------------------------------------------------------------------------------------------
 SELECT 
     j.nome,
     COUNT(c.idComentario) AS qtdComentarios
@@ -151,10 +90,13 @@ ORDER BY
     qtdComentarios DESC
 LIMIT 8;
 
+-- PÁGINA COMENTÁRIOS
+-- --------------------------------------------------------------------------- Select de buscar comentarios ------------------------------------------------------------------------------------------------
 SELECT 
-  j.nome AS nomeJogo,
-  c.descricao AS comentario,
-  u.nome AS autor
+	j.nome AS nome_jogo,
+	c.descricao AS comentario,
+	u.nome AS autor,
+	u.gamertag AS gamertag
 FROM Comentario c
 JOIN Usuario u ON c.fkUsuario = u.idUsuario
 JOIN Jogos j ON c.fkJogo = j.idJogo;
