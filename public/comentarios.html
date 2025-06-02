@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/comentarios.css" />
+    <link rel="icon" href="./assets/icon/icon pag.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários • 360 World</title>
+</head>
+
+<body onload="buscarComentarios()">
+
+    <header>
+        <nav>
+            <a class="logo" href="index.html">360 World</a>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li class="agora"><a href="comentarios.html">Cometários</a></li>
+                <li>|</li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="banner_conteudo">
+                <div class="banner_texto">
+                    <h1>Faça seu comentário</h1>
+                    <p>Uma coleção pessoal dos melhores títulos que marcaram a era do Xbox 360. Explore, comente e
+                        compartilhe suas experiências com estes clássicos.</p>
+                </div>
+                <form class="caixa_comentario">
+                    <textarea placeholder="Escreva seu comentário aqui:" id="input_comentario"></textarea>
+                    <button class="botao">Enviar comentário</button>
+                </form>
+                <div id="comentarios" class="comentarios">
+                    <h3>Comentários</h3>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div class="footer footer_comentarios">
+        <div class="container">
+            <h4>Feito por Gabriel dos Santos Figueiredo</h4>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="./js/scriptComentarios.js"></script>
+
+</html>
