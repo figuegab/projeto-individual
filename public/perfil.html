@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="icon" href="./assets/icon/icon pag.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu peril • 360 World</title>
+</head>
+
+<body onload="buscarCards(); buscarDadosGraficoBarra();">
+
+    <header>
+        <nav>
+            <a class="logo" href="index.html">360 World</a>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="comentarios.html">Comentários</a></li>
+                <span class="navbar" id="span_usuario_logado">
+                    <li>|</li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                </span>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cards" class="cards">
+            <div class="card_conteudo">
+
+                <h2 class="titulo">Biblioteca de jogos</h2>
+
+                <div id="cards_jogos"></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer footer_biblioteca">
+        <div class="container">
+            <h4>Feito por Gabriel dos Santos Figueiredo</h4>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="./js/scriptBiblioteca.js"></script>
+
+</html>
