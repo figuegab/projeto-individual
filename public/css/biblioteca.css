@@ -67,7 +67,7 @@
 .banner_imagem {
     width: 80%;
     height: 80%;
-    background-image: url(../assets/imgs/xbox_tinta.png);
+    background-image: url(../assets/imgs/biblioteca.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -97,6 +97,12 @@
     background-color: white;
     box-shadow: 0px 0px 18px -5px rgba(66, 68, 90, 1);
     border-radius: 10px;
+    padding: 1rem;
+}
+
+canvas#graficoBarra {
+  width: 100% !important;  
+  height: 400px !important; 
 }
 
 .cards {
@@ -118,6 +124,14 @@
     gap: 2rem;
 }
 
+#cards_jogos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
 .titulo {
     font-size: 34px;
 }
@@ -125,6 +139,7 @@
 .card_jogo {
     display: flex;
     flex-direction: row;
+    width: 100%;
     box-shadow: 0px 0px 18px -5px rgba(66, 68, 90, 1);
     border-radius: 10px;
 }
@@ -146,6 +161,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    width: 100%;
 }
 
 .card_texto_conteudo {
@@ -172,7 +188,7 @@
 
 .card_cometarios {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 

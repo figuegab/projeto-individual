@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/biblioteca.css" />
     <link rel="icon" href="./assets/icon/icon pag.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início • 360 World</title>
 </head>
 
-<body>
+<body onload="buscarCards(); buscarDadosGraficoBarra();">
 
     <header>
         <nav>
-            <a class="logo" href="home.html">360 World</a>
+            <a class="logo" href="index.html">360 World</a>
             <ul class="navbar">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="agora"><a href="biblioteca.html">Biblioteca</a></li>
                 <li>|</li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="#">Cadastro</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +52,9 @@
         <section id="grafico" class="grafico">
             <div class="grafico_conteudo">
                 <h1 class="titulo">Jogos mais comentados</h1>
-                <div class="grafico_box"></div>
+                <div class="grafico_box">
+                    <canvas id="graficoBarra"></canvas>
+                </div>
                 <p>Estes são os jogos mais comentados da biblioteca. Compartilhe sua opinião também!</p>
             </div>
         </section>
@@ -61,31 +64,7 @@
 
                 <h2 class="titulo">Biblioteca de jogos</h2>
 
-                <div class="card_jogo">
-                    <div class="card_img">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.bipI59bV43vkSRRqlMDVUgHaJZ?rs=1&pid=ImgDetMain">
-                    </div>
-                    <div class="card_texto">
-                        <div class="card_texto_conteudo">
-                            <h2>Halo 4</h2>
-                            <div>
-                                <span>FPS</span>
-                            </div>
-                            <p>O épico final da trilogia original do Master Chief. Halo 3 conclui a saga contra o
-                                Covenant e
-                                os Floods com gráficos impressionantes, uma campanha memorável e um modo multiplayer
-                                revolucionário que definiu padrões para a indústria. </p>
-                        </div>
-
-                        <div class="card_cometarios">
-                            <p>123 comentarops</p>
-                            <a href="comentarios.html">
-                                <button class="botao">Comentar</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                <div id="cards_jogos"></div>
             </div>
         </section>
     </main>
@@ -97,5 +76,6 @@
     </div>
 
 </body>
+<script type="text/javascript" src="./js/scriptBiblioteca.js"></script>
 
 </html>
