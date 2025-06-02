@@ -29,6 +29,11 @@
     color: green;
 }
 
+.banner_conteudo h3 {
+    font-size: 29px;
+    color: green;
+}
+
 .banner_conteudo p {
     font-size: 17px;
 }
@@ -57,7 +62,7 @@
 .historia_imagem {
     width: 80%;
     height: 80%;
-    background-image: url(../assets/imgs/logomarca_s_fundo_360World.png);
+    background-image: url(../assets/imgs/xbox.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -67,6 +72,15 @@
     width: 80%;
     height: 80%;
     background-image: url(../assets/imgs/ods.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sobre_imagem {
+    width: 80%;
+    height: 80%;
+    background-image: url(../assets/imgs/foto\ xbox.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
