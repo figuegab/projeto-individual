@@ -1,4 +1,4 @@
--- DROP DATABASE 360World;
+DROP DATABASE 360World;
 
 CREATE DATABASE 360World;
 
@@ -37,42 +37,49 @@ CREATE TABLE Comentario (
 );
 
 INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
-('Gabriel', 'gabileeu', 'gabriel.figueiredo@sptech.school', md5('123'));
-
-INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
-('Lucas', 'lucas_gamer', 'lucas@example.com', MD5('senha123')),
-('Fernanda', 'fer_play', 'fernanda@example.com', MD5('senha456'));
-
+('Gabriel', 'gabileeu', 'gabriel.figueiredo@sptech.school', md5('123')),
+('Frizza', 'claudinho_games_hd', 'frizza@sptech.school', MD5('123')),
+('Paula', 'paulinha_FPS', 'paula@sptech.school', MD5('123'));
 
 INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
-('Minecraft', 'Sandbox', 'Construa e explore mundos infinitos com blocos.', 'https://tse3.mm.bing.net/th/id/OIP.e7MgPZ7G2J5jO952pg5_xQHaKt?rs=1&pid=ImgDetMain'),
-('Halo 4', 'FPS', 'Lute contra forças alienígenas como Master Chief em uma guerra épica.', 'https://tse2.mm.bing.net/th/id/OIP.paOZSyZpMu-IisOLMGuLJgHaKh?rs=1&pid=ImgDetMain'),
-('Kinect Sports', 'Esporte', 'Jogue esportes com movimentos do corpo usando o Kinect.', 'https://tse2.mm.bing.net/th/id/OIP.pwZTdgx2QdDaZrdrI3hhcwHaKe?rs=1&pid=ImgDetMain'),
-('Call of Duty: Black Ops II', 'FPS', 'Combate futurista com narrativa envolvente em primeira pessoa.', 'https://tse1.mm.bing.net/th/id/OIP.Qa8F7FaEoQ7qkRQ7EVJtJAHaKb?w=600&h=845&rs=1&pid=ImgDetMain'),
-('PES 2013', 'Esporte', 'Simulação de futebol com jogabilidade rápida e fluida.', 'https://tse1.mm.bing.net/th/id/OIP.bSkj7VNRduUdMU1sbzv5sAHaKf?rs=1&pid=ImgDetMain'),
-('FIFA 15', 'Esporte', 'Futebol com gráficos realistas e jogabilidade refinada.', 'https://www.mobygames.com/images/covers/l/516601-fifa-15-xbox-360-front-cover.jpg'),
-('FIFA Street', 'Esporte', 'Futebol de rua com dribles espetaculares e partidas rápidas.', 'https://www.lukiegames.com/assets/images/x360_fifa_street.jpg'),
-('Cars 2', 'Corrida', 'Corridas emocionantes com os personagens do filme Carros 2.', 'https://images-na.ssl-images-amazon.com/images/I/91ztbGOktVL._AC_SL1500_.jpg'),
-('Toy Story 3', 'Aventura', 'Jogo baseado no filme com missões cooperativas e ação divertida.', 'https://www.lukiegames.com/assets/images/Xbox-360/x360_toy_story_3_p_mo6yws.jpg'),
-('GTA V', 'Ação', 'Mundo aberto com missões criminais e liberdade total de exploração.', 'https://tse2.mm.bing.net/th/id/OIP.gBMTsCNmshnOreFOMItMZAHaKd?rs=1&pid=ImgDetMain'),
-('Rayman Origins', 'Plataforma', 'Jogo de plataforma com gráficos vibrantes e jogabilidade cooperativa.', 'https://tse3.mm.bing.net/th/id/OIP.OHzxzV2resF3CJ7Xn8lfbgHaKc?rs=1&pid=ImgDetMain');
+('Minecraft', 'Sandbox', 'Um jogo de construção e aventura em mundo aberto', 'https://tse3.mm.bing.net/th/id/OIP.e7MgPZ7G2J5jO952pg5_xQHaKt?rs=1&pid=ImgDetMain'),
+('Halo 4', 'FPS', 'A continuação da saga do Master Chief', 'https://tse2.mm.bing.net/th/id/OIP.paOZSyZpMu-IisOLMGuLJgHaKh?rs=1&pid=ImgDetMain'),
+('Call of Duty: Black Ops 2', 'FPS', 'Jogo de tiro em primeira pessoa da famosa série Call of Duty', 'https://tse1.mm.bing.net/th/id/OIP.Qa8F7FaEoQ7qkRQ7EVJtJAHaKb?w=600&h=845&rs=1&pid=ImgDetMain'),
+('PES 2013', 'Esporte', 'Pro Evolution Soccer 2013 - simulador de futebol', 'https://tse1.mm.bing.net/th/id/OIP.bSkj7VNRduUdMU1sbzv5sAHaKf?rs=1&pid=ImgDetMain'),
+('FIFA 15', 'Esporte', 'Jogo de futebol da EA Sports', 'https://www.mobygames.com/images/covers/l/516601-fifa-15-xbox-360-front-cover.jpg'),
+('GTA V', 'Ação/Aventura', 'Grand Theft Auto V - mundo aberto com diversas atividades', 'https://tse2.mm.bing.net/th/id/OIP.gBMTsCNmshnOreFOMItMZAHaKd?rs=1&pid=ImgDetMain'),
+('Cars 2', 'Corrida', 'Jogo baseado no filme da Disney/Pixar', 'https://images-na.ssl-images-amazon.com/images/I/91ztbGOktVL._AC_SL1500_.jpg'),
+('Toy Story 3', 'Aventura', 'Jogo baseado no filme da Disney/Pixar', 'https://www.lukiegames.com/assets/images/Xbox-360/x360_toy_story_3_p_mo6yws.jpg'),
+('Rayman Origins', 'Plataforma', 'Jogo de plataforma 2D com visuais impressionantes', 'https://tse3.mm.bing.net/th/id/OIP.OHzxzV2resF3CJ7Xn8lfbgHaKc?rs=1&pid=ImgDetMain'),
+('Mortal Kombat 9', 'Luta', 'Jogo de luta com violência extrema e fatalities', 'https://m.media-amazon.com/images/I/61sHkx-vLlL._AC_UF1000,1000_QL80_.jpg'),
+('Skate 3', 'Esporte', 'Simulador de skate com física realista', 'https://store-images.s-microsoft.com/image/apps.18720.68005754082254855.39795a60-73cf-4461-87d9-7f112c30c43c.46888afa-996b-4016-b5b4-c2e0b78171e2'),
+('Midnight Club: Los Angeles', 'Corrida', 'Jogo de corrida em mundo aberto', 'https://down-br.img.susercontent.com/file/br-11134207-7qukw-lhfn1ztmbggt6e'),
+('Forza Horizon', 'Corrida', 'Jogo de corrida em mundo aberto com gráficos impressionantes', 'https://i.zst.com.br/thumbs/12/16/3a/8802190.jpg'),
+('Lego Batman', 'Aventura', 'Jogo de aventura com tema do Batman em universo Lego', 'https://m.media-amazon.com/images/I/61kH8EaZ+BL._AC_UF1000,1000_QL80_.jpg'),
+('Lego Marvel Super Heroes', 'Aventura', 'Jogo de aventura com heróis da Marvel em universo Lego', 'https://m.media-amazon.com/images/I/61GWlP9kknL.jpg'),
+('Kinect Sports', 'Esporte', 'Jogo de esportes que utiliza o sensor Kinect', 'https://tse2.mm.bing.net/th/id/OIP.pwZTdgx2QdDaZrdrI3hhcwHaKe?rs=1&pid=ImgDetMain'),
+('Just Dance', 'Ritmo', 'Jogo de dança com músicas populares', 'https://m.media-amazon.com/images/I/91pEyUmTd8L.jpg'),
+('Dance Central 2', 'Ritmo', 'Jogo de dança desenvolvido para o Kinect', 'https://m.media-amazon.com/images/I/81aG4Bf3iRL._AC_UF1000,1000_QL80_.jpg');
 
 INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
-('Minecraft é incrível! A liberdade de construção e exploração torna o jogo único.', 1, 1),
-('Halo 4 tem uma campanha épica e um multiplayer viciante!', 1, 2),
-('Kinect Sports é perfeito para jogar em família, diversão garantida!', 1, 3),
-('Call of Duty: Black Ops II tem uma das melhores histórias da franquia.', 1, 4),
-('PES 2013 marcou uma era dos jogos de futebol, muito nostálgico!', 1, 5),
-('FIFA 15 trouxe gráficos incríveis e uma jogabilidade refinada.', 1, 6),
-('FIFA Street é pura adrenalina! Dribles incríveis e partidas rápidas.', 1, 7),
-('Cars 2 é divertido para crianças e fãs do filme.', 1, 8),
-('Toy Story 3 tem uma jogabilidade cooperativa super divertida.', 1, 9),
-('GTA V é um dos melhores jogos de mundo aberto já feitos!', 1, 10),
-('Rayman Origins tem um estilo artístico maravilhoso e jogabilidade fluida.', 1, 11);
-
-INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
-('Minecraft é sensacional!', 2, 1),
-('Halo 4 tem uma jogabilidade incrível!', 3, 2);
+('GTA V continua sendo o melhor jogo de mundo aberto', 2, 6),
+('Minecraft é viciante! Passei 10 horas construindo hoje', 3, 1),
+('Halo 4 tem uma história emocionante', 3, 2),
+('FIFA 15 envelheceu mal, mas na época foi revolucionário', 2, 5),
+('Dance Central 2 é o melhor jogo de dança que já joguei', 3, 18),
+('Mortal Kombat 9 é violento demais pra mim', 2, 10),
+('Rayman Origins tem os visuais mais bonitos do 360', 3, 9),
+('COD BO 2 tem o melhor modo zombies', 2, 3),
+('Forza Horizon mudou minha visão sobre jogos de corrida', 3, 13),
+('Kinect Sports é bom pra jogar em família', 2, 16),
+('Midnight Club LA tem customização incrível', 3, 12),
+('Cars 2 é melhor do que eu esperava', 2, 7),
+('PES 2013 tem um controle de bola incrível', 3, 4),
+('Lego Marvel Super Heroes é cheio de easter eggs', 2, 15),
+('Just Dance é divertido mas cansa rápido', 3, 17),
+('Toy Story 3 me fez sentir criança de novo', 2, 8),
+('Lego Batman tem um humor incrível', 3, 14),
+('Skate 3 tem a melhor física da série', 2, 11);
 
 -- -------------------------------------------------------------------------------------- SELECTS ----------------------------------------------------------------------------------------------------------
 
