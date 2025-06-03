@@ -101,6 +101,7 @@ header a {
   color: #fff;
   display: flex;
   font-size: 15px;
+  justify-content: center;
 }
 
 .footer .container {
