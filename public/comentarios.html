@@ -35,10 +35,12 @@
                     <h1>Faça seu comentário</h1>
                     <p>Uma coleção pessoal dos melhores títulos que marcaram a era do Xbox 360. Explore, comente e
                         compartilhe suas experiências com estes clássicos.</p>
+                    
                 </div>
-                <form class="caixa_comentario">
+                <form class="caixa_comentario" id="form" method="post" onsubmit="criarComentarios(event)">
+                    <h2 id="nome_jogo"></h2>
                     <textarea placeholder="Escreva seu comentário aqui:" id="input_comentario"></textarea>
-                    <button class="botao">Enviar comentário</button>
+                    <button class="botao" type="submit">Enviar comentário</button>
                 </form>
                 <div id="comentarios" class="comentarios">
                     <h3>Comentários</h3>
