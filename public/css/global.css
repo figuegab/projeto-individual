@@ -67,10 +67,9 @@ header a {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 76%;
-  margin: auto;
+  width: 80%;
 }
 
 /* BODY */

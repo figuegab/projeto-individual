@@ -45,12 +45,10 @@ function cadastrar() {
                         setTimeout(() => {
                             window.location = "/login.html";
                         }, "2000");
-
-                        limparFormulario();
                        
                     } else {
                         alert(`Email já cadastrado`);
-                        throw "Houve um erro";
+                        throw "Houve um erro:";
                     }
                 })
                 .catch(function (resposta) {

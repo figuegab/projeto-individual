@@ -8,16 +8,11 @@ function entrar() {
 
     if (emailVar == "" || senhaVar == "") {
         // cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-        // Esconder a mensagem de erro após 5 segundos
-        setTimeout(function() {
-            // cardErro.style.display = "none";
-        }, 5000);
+        alert("Preencha todos os campos");
 
         return false;
-    } else {
-        alert(`Aguarde um instante...`);
+    } else if (emailVar ){
+        alert(`Aguarde um instante`);
     }
 
     console.log("FORM LOGIN: ", emailVar);
@@ -41,6 +36,7 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
                 sessionStorage.NOME_USER = json.nome;
+                sessionStorage.GAMERTAG_USER = json.gamertag;
                 sessionStorage.EMAIL_USER = json.email;
                 sessionStorage.ID_USER = json.idUsuario;
 

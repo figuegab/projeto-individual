@@ -6,6 +6,7 @@ function buscarCards() {
     );
     var instrucaoSql = `
         SELECT 
+            j.idJogo,
             j.nome,
             j.genero,
             j.descricao,

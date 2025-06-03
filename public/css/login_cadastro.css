@@ -1,13 +1,28 @@
 /* LOGIN */
-.login {
-  height: 90vh;
-  padding: 1rem;
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.login .container {
-  justify-content: end;
+.login {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 90vh;
+  width: 80%;
+}
+
+.imagem {
+  width: 100%;
   height: 100%;
+  background-image: url(../assets/imgs/banner_login.png);
+  background-repeat: no-repeat;
+  background-position: start;
+  background-size: contain;
 }
 
 .card {

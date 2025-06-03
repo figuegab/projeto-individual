@@ -1,10 +1,19 @@
 let span_usuario_logado = document.getElementById("span_usuario_logado");
 
+let jogo = sessionStorage.NOME_JOGO;
+let nome_jogo = document.getElementById("nome_jogo");
+
+
+function guardarJogo(id, nome) {
+  sessionStorage.setItem("ID_JOGO", id);
+  sessionStorage.setItem("NOME_JOGO", nome);
+}
+
 if (sessionStorage.NOME_USER) {
   console.log(`Nome do usuário: ${sessionStorage.NOME_USER}`);
   span_usuario_logado.innerHTML = `
   <li>|</li>
-  <li class="perfil_titulo"><a href="perfil.html">Perfil</a></li>
+  <li class="perfil_titulo"><a href="perfil.html">Olá, ${sessionStorage.NOME_USER}</a></li>
   `;
 } else {
   span_usuario_logado.style.display = "flex";
@@ -101,7 +110,7 @@ function buscarCards() {
 
           for (let i = 0; i < resposta.length; i++) {
             div_cards.innerHTML += `
-                 <div class="card_jogo">
+                 <div id="${resposta[i].idJogo}" class="card_jogo">
                         <div class="card_img">
                             <img src="${resposta[i].urlImagem}">
                         </div>
@@ -116,7 +125,7 @@ function buscarCards() {
 
                             <div class="card_cometarios">
                                 <p>${resposta[i].qtdComentarios} Comentários</p>
-                                <a href="comentarios.html">
+                                <a href="comentarios.html" onclick="guardarJogo(${resposta[i].idJogo}, '${resposta[i].nome}')">
                                     <button class="botao">Comentar</button>
                                 </a>
                             </div>
