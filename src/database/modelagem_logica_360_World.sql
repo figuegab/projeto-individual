@@ -39,6 +39,11 @@ CREATE TABLE Comentario (
 INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
 ('Gabriel', 'gabileeu', 'gabriel.figueiredo@sptech.school', md5('123'));
 
+INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
+('Lucas', 'lucas_gamer', 'lucas@example.com', MD5('senha123')),
+('Fernanda', 'fer_play', 'fernanda@example.com', MD5('senha456'));
+
+
 INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('Minecraft', 'Sandbox', 'Construa e explore mundos infinitos com blocos.', 'https://tse3.mm.bing.net/th/id/OIP.e7MgPZ7G2J5jO952pg5_xQHaKt?rs=1&pid=ImgDetMain'),
 ('Halo 4', 'FPS', 'Lute contra forças alienígenas como Master Chief em uma guerra épica.', 'https://tse2.mm.bing.net/th/id/OIP.paOZSyZpMu-IisOLMGuLJgHaKh?rs=1&pid=ImgDetMain'),
@@ -51,6 +56,23 @@ INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('Toy Story 3', 'Aventura', 'Jogo baseado no filme com missões cooperativas e ação divertida.', 'https://www.lukiegames.com/assets/images/Xbox-360/x360_toy_story_3_p_mo6yws.jpg'),
 ('GTA V', 'Ação', 'Mundo aberto com missões criminais e liberdade total de exploração.', 'https://tse2.mm.bing.net/th/id/OIP.gBMTsCNmshnOreFOMItMZAHaKd?rs=1&pid=ImgDetMain'),
 ('Rayman Origins', 'Plataforma', 'Jogo de plataforma com gráficos vibrantes e jogabilidade cooperativa.', 'https://tse3.mm.bing.net/th/id/OIP.OHzxzV2resF3CJ7Xn8lfbgHaKc?rs=1&pid=ImgDetMain');
+
+INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
+('Minecraft é incrível! A liberdade de construção e exploração torna o jogo único.', 1, 1),
+('Halo 4 tem uma campanha épica e um multiplayer viciante!', 1, 2),
+('Kinect Sports é perfeito para jogar em família, diversão garantida!', 1, 3),
+('Call of Duty: Black Ops II tem uma das melhores histórias da franquia.', 1, 4),
+('PES 2013 marcou uma era dos jogos de futebol, muito nostálgico!', 1, 5),
+('FIFA 15 trouxe gráficos incríveis e uma jogabilidade refinada.', 1, 6),
+('FIFA Street é pura adrenalina! Dribles incríveis e partidas rápidas.', 1, 7),
+('Cars 2 é divertido para crianças e fãs do filme.', 1, 8),
+('Toy Story 3 tem uma jogabilidade cooperativa super divertida.', 1, 9),
+('GTA V é um dos melhores jogos de mundo aberto já feitos!', 1, 10),
+('Rayman Origins tem um estilo artístico maravilhoso e jogabilidade fluida.', 1, 11);
+
+INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
+('Minecraft é sensacional!', 2, 1),
+('Halo 4 tem uma jogabilidade incrível!', 3, 2);
 
 -- -------------------------------------------------------------------------------------- SELECTS ----------------------------------------------------------------------------------------------------------
 
@@ -100,3 +122,37 @@ SELECT
 FROM Comentario c
 JOIN Usuario u ON c.fkUsuario = u.idUsuario
 JOIN Jogos j ON c.fkJogo = j.idJogo;
+
+-- --------------------------------------------------------------------------- Insert de criar comentário ------------------------------------------------------------------------------------------------
+INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
+('Descrição do comentário', 1, 1); -- '${descricao}', ${fkUsuario}, ${fkJogo}
+
+-- PÁGINA PERFIL
+-- --------------------------------------------------------------------------- Select de buscar 3 últimmos comentários do usuário ------------------------------------------------------------------------------------------------
+SELECT 
+	j.nome AS nome_jogo,
+	c.descricao AS comentario,
+	u.nome AS autor,
+	u.gamertag AS gamertag
+FROM Comentario c
+JOIN Usuario u ON c.fkUsuario = u.idUsuario
+JOIN Jogos j ON c.fkJogo = j.idJogo
+WHERE fkUsuario = 1 -- ${fkUsuario}
+ORDER BY c.idComentario DESC
+LIMIT 3;
+-- --------------------------------------------------------------------------- Select de buscar quantidade de comentários ------------------------------------------------------------------------------------------------
+SELECT 
+    COUNT(*) AS total_comentarios
+FROM Comentario
+WHERE fkUsuario = 1; -- {fkUsuario}
+
+-- --------------------------------------------------------------------------- Select de buscar jogo mais comentado ------------------------------------------------------------------------------------------------
+SELECT 
+    COUNT(c.idComentario) AS total_comentarios,
+    j.nome AS nome_jogo
+FROM Comentario c
+JOIN Jogos j ON c.fkJogo = j.idJogo
+WHERE c.fkUsuario = 1 -- {fkUsuario}
+GROUP BY j.nome
+ORDER BY total_comentarios DESC
+LIMIT 1;
