@@ -11,7 +11,7 @@
     <title>Meu peril • 360 World</title>
 </head>
 
-<body onload="buscarCards(); buscarDadosGraficoBarra();">
+<body onload="buscarComentariosUsuario(); buscarQuantidadeComentarios(); buscarJogoMaisComentado()">
 
     <header>
         <nav>
@@ -31,21 +31,64 @@
     <main>
         <section id="cards" class="cards">
             <div class="card_conteudo">
+                <div class="card_perfil">
+                    <h2 class="titulo">Meu perfil</h2>
+                    <div class="perfil_user">
+                        <div class="card_texto">
+                            <div class="card_texto_conteudo">
+                                <form class="form">
+                                    <label>
+                                        Nome
+                                        <input id="nome_usuario"></input>
+                                    </label>
+                                    <label>
+                                        Gamertag
+                                        <input id="gamertag_usuario"></input>
+                                    </label>
+                                    <label>
+                                        E-mail
+                                        <input id="email_usuario"></input>
+                                    </label>
+                                    <div class="botoes">
+                                        <button class="botao">Editar</button>
+                                        <button class="botao excluir">Excluir</button>
+                                    </div>
 
-                <h2 class="titulo">Biblioteca de jogos</h2>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div id="cards_jogos"></div>
+                <div class="informacoes_usuario">
+                    <div class="kpis">
+                        <div class="kpi">
+                            <p>Quantidade de comentários</p>
+                            <h4 id="kpi_quantidade"></h4>
+                            <span></span>
+                        </div>
+                        <div class="kpi">
+                            <p>Jogo mais comentado</p>
+                            <h4 id="kpi_mais_comentado"></h4>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div id="comentarios" class="comentarios">
+                        <h3>Últimos comentários</h3>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <div class="footer footer_biblioteca">
+    <div class="footer footer_perfil">
         <div class="container">
             <h4>Feito por Gabriel dos Santos Figueiredo</h4>
         </div>
     </div>
 
 </body>
-<script type="text/javascript" src="./js/scriptBiblioteca.js"></script>
+<script type="text/javascript" src="./js/scriptPerfil.js"></script>
 
 </html>
