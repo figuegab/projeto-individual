@@ -41,6 +41,8 @@ INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
 ('Frizza', 'claudinho_games_hd', 'frizza@sptech.school', MD5('123')),
 ('Paula', 'paulinha_FPS', 'paula@sptech.school', MD5('123'));
 
+SELECT * FROM Usuario;
+
 INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('Minecraft', 'Sandbox', 'Um jogo de construção e aventura em mundo aberto', 'https://tse3.mm.bing.net/th/id/OIP.e7MgPZ7G2J5jO952pg5_xQHaKt?rs=1&pid=ImgDetMain'),
 ('Halo 4', 'FPS', 'A continuação da saga do Master Chief', 'https://tse2.mm.bing.net/th/id/OIP.paOZSyZpMu-IisOLMGuLJgHaKh?rs=1&pid=ImgDetMain'),
@@ -61,6 +63,8 @@ INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('Just Dance', 'Ritmo', 'Jogo de dança com músicas populares', 'https://m.media-amazon.com/images/I/91pEyUmTd8L.jpg'),
 ('Dance Central 2', 'Ritmo', 'Jogo de dança desenvolvido para o Kinect', 'https://m.media-amazon.com/images/I/81aG4Bf3iRL._AC_UF1000,1000_QL80_.jpg');
 
+SELECT * FROM Jogos;
+
 INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
 ('GTA V continua sendo o melhor jogo de mundo aberto', 2, 6),
 ('Minecraft é viciante! Passei 10 horas construindo hoje', 3, 1),
@@ -80,6 +84,8 @@ INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
 ('Toy Story 3 me fez sentir criança de novo', 2, 8),
 ('Lego Batman tem um humor incrível', 3, 14),
 ('Skate 3 tem a melhor física da série', 2, 11);
+
+SELECT * FROM Comentario;
 
 -- -------------------------------------------------------------------------------------- SELECTS ----------------------------------------------------------------------------------------------------------
 

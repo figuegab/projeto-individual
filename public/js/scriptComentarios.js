@@ -78,10 +78,11 @@ function criarComentarios(event) {
     console.log("resposta: ", resposta);
 
     if (resposta.ok) {
-      window.alert("Post realizado com sucesso");
+      alert("Post realizado com sucesso!");
     } else if (resposta.status == 404) {
       console.log("Erro: " + resposta)
     } else {
+      alert(`Post não realizado. Identifique-se primeiro.`);
       throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
     }
   }).catch(function (resposta) {

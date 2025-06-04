@@ -11,8 +11,7 @@ function cadastrar() {
     let camposNaoPreenchidos = user == "" || email == "" || senha == "" || confirmarSenha == "";
 
     if (camposNaoPreenchidos) {
-        alert(`Preencha todos os campos`);
-       
+        alert(`Preencha todos os campos!`);
         return false;
     } else {
 
@@ -40,7 +39,7 @@ function cadastrar() {
                     if (resposta.ok) {
                         // cardErro.style.display = "block";
 
-                        alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+                        alert("Cadastro realizado com sucesso! Redirecionando para tela de Login.");
 
                         setTimeout(() => {
                             window.location = "/login.html";
@@ -62,7 +61,3 @@ function cadastrar() {
         }
     }
 }
-
-// function sumirMensagem() {
-//     cardErro.style.display = "none";
-// }

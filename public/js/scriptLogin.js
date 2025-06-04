@@ -11,8 +11,8 @@ function entrar() {
         alert("Preencha todos os campos");
 
         return false;
-    } else if (emailVar ){
-        alert(`Aguarde um instante`);
+    } else if (emailVar, senhaVar){
+        alert(`Verificando credenciais.`);
     }
 
     console.log("FORM LOGIN: ", emailVar);
@@ -47,6 +47,8 @@ function entrar() {
 
         } else {
             console.log("Houve um erro ao tentar realizar o login!");
+            alert("Houve um erro ao tentar realizar o login!");
+
 
             resposta.text().then(texto => {
                 console.error(texto);
