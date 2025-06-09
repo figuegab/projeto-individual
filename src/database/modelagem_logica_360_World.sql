@@ -36,12 +36,14 @@ CREATE TABLE Comentario (
     REFERENCES Jogos (idJogo)
 );
 
+/*
 INSERT INTO Usuario (nome, gamertag, email, senha) VALUES
-('Gabriel', 'gabileeu', 'gabriel.figueiredo@sptech.school', md5('123')),
+('Gabriel', 'gabileeu', 'gabriel.figueiredo@sptech.school', md5('123'));
 ('Frizza', 'claudinho_games_hd', 'frizza@sptech.school', MD5('123')),
-('Paula', 'paulinha_FPS', 'paula@sptech.school', MD5('123'));
+('Paula', 'paulinha_FPS', 'paula@sptech.school', MD5('123'))
 
 SELECT * FROM Usuario;
+*/
 
 INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 ('Minecraft', 'Sandbox', 'Um jogo de construção e aventura em mundo aberto', 'https://tse3.mm.bing.net/th/id/OIP.e7MgPZ7G2J5jO952pg5_xQHaKt?rs=1&pid=ImgDetMain'),
@@ -65,6 +67,7 @@ INSERT INTO Jogos (nome, genero, descricao, urlImagem) VALUES
 
 SELECT * FROM Jogos;
 
+/* 
 INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
 ('GTA V continua sendo o melhor jogo de mundo aberto', 2, 6),
 ('Minecraft é viciante! Passei 10 horas construindo hoje', 3, 1),
@@ -83,9 +86,11 @@ INSERT INTO Comentario (descricao, fkUsuario, fkJogo) VALUES
 ('Just Dance é divertido mas cansa rápido', 3, 17),
 ('Toy Story 3 me fez sentir criança de novo', 2, 8),
 ('Lego Batman tem um humor incrível', 3, 14),
-('Skate 3 tem a melhor física da série', 2, 11);
+('Skate 3 tem a melhor física da série', 2, 11),
+('Minecraft é o melhor jogo já feito na história!', 1, 1);
 
 SELECT * FROM Comentario;
+*/
 
 -- -------------------------------------------------------------------------------------- SELECTS ----------------------------------------------------------------------------------------------------------
 
